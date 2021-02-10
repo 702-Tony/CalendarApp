@@ -15,6 +15,7 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+src/lib
 
 ######
 # OS #

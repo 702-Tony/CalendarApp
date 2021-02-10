@@ -1,0 +1,22 @@
+############
+# DB Creds #
+############
+src/resources/dbconfig.properties
+
+# Below borrowed from https://gist.github.com/chhh/4961200
+
+#####################
+# NetBeans specific #
+#####################
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+######
+# OS #
+######
+.DS_Store

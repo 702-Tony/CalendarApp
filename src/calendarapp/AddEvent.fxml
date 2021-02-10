@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.24271844660194175" focusTraversable="true" prefHeight="482.0" prefWidth="826.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="calendarapp.AddEventController">
+  <items>
+    <VBox maxWidth="-Infinity" prefHeight="480.0" prefWidth="200.0" />
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+      <children>
+        <Label alignment="CENTER_LEFT" text="Add New Event">
+          <font>
+            <Font name="Arial Bold" size="18.0" />
+          </font>
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+          </VBox.margin>
+        </Label>
+        <GridPane fx:id="myGrid">
+          <children>
+            <Label text="Title*" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="Start Time*" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="End Time*" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Label text="Customer*" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label text="Location*" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Label text="Contact*" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Label text="Type*" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="titleField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="locationField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="contactField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="typeField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextArea fx:id="descriptionBox" prefWidth="200.0" promptText="Optional" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <HBox fx:id="customerHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <children>
+                <TextField fx:id="customerField" editable="false" prefWidth="251.0" />
+                <Button fx:id="selectCustomer" mnemonicParsing="false" onAction="#handleSelectCustomer" text="Select Customer" />
+              </children>
+            </HBox>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="309.0" minWidth="10.0" prefWidth="151.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="470.0" minWidth="10.0" prefWidth="470.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </VBox.margin>
+        </GridPane>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSave" text="Save">
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </items>
+</SplitPane>

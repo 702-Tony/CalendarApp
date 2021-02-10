@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="826.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="calendarapp.CustomerScreenController">
+  <center>
+    <TableView fx:id="customerTable" minWidth="-1.0" prefHeight="200.0" prefWidth="200.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="166.0" text="Customer Name" fx:id="customerCol" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="153.0" text="Phone" fx:id="phoneCol" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="147.0" text="City" fx:id="cityCol" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="159.0" text="Country" fx:id="countryCol" />
+      </columns>
+      <BorderPane.margin>
+        <Insets bottom="25.0" right="25.0" />
+      </BorderPane.margin>
+    </TableView>
+  </center>
+  <left>
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="TOP_CENTER">
+      <children>
+        <Button fx:id="addButton" alignment="CENTER" contentDisplay="LEFT" mnemonicParsing="false" onAction="#handleAdd" text="Add Customer">
+          <VBox.margin>
+            <Insets bottom="10.0" top="10.0" fx:id="x1" />
+          </VBox.margin>
+        </Button>
+        <Button fx:id="editButton" mnemonicParsing="false" onAction="#handleEdit" text="Edit Customer" VBox.margin="$x1" />
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDelete" text="Delete Customer" VBox.margin="$x1" />
+        <Button id="deleteButton" mnemonicParsing="false" onAction="#handleBack" text="Back">
+          <VBox.margin>
+            <Insets bottom="10.0" top="10.0" fx:id="x1" />
+          </VBox.margin>
+        </Button>
+      </children>
+    </VBox>
+  </left>
+  <top>
+    <Label alignment="CENTER" contentDisplay="LEFT" text="Customers" BorderPane.alignment="CENTER">
+      <font>
+        <Font name="Arial Bold" size="18.0" />
+      </font>
+      <BorderPane.margin>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+      </BorderPane.margin>
+    </Label>
+  </top>
+</BorderPane>
